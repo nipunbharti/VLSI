@@ -1,0 +1,57 @@
+#! /usr/local/Cellar/icarus-verilog/10.2_1/bin/vvp
+:ivl_version "10.2 (stable)" "(v10_2)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fb280600540 .scope module, "and_gate" "and_gate" 2 3;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "res"
+o0x10148c068 .functor BUFZ 1, C4<z>; HiZ drive
+v0x7fb280408e00_0 .net "A", 0 0, o0x10148c068;  0 drivers
+o0x10148c098 .functor BUFZ 1, C4<z>; HiZ drive
+v0x7fb280408eb0_0 .net "B", 0 0, o0x10148c098;  0 drivers
+RS_0x10148c218 .resolv tri, L_0x7fb280409710, L_0x7fb280409800;
+v0x7fb280408f60_0 .net8 "res", 0 0, RS_0x10148c218;  2 drivers, strength-aware
+RS_0x10148c0f8 .resolv tri, L_0x7fb280409360, L_0x7fb280409470, L_0x7fb280409560;
+v0x7fb280409030_0 .net8 "temp", 0 0, RS_0x10148c0f8;  3 drivers, strength-aware
+S_0x7fb280602740 .scope module, "nand_temp" "nand_gate" 2 6, 3 1 0, S_0x7fb280600540;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /OUTPUT 1 "result"
+L_0x7fb280409190 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7fb280409360 .functor PMOS 1, L_0x7fb280409190, o0x10148c068, C4<0>, C4<0>;
+L_0x7fb280409470 .functor PMOS 1, L_0x7fb280409190, o0x10148c098, C4<0>, C4<0>;
+L_0x7fb280409560 .functor NMOS 1, L_0x7fb280409620, o0x10148c068, C4<0>, C4<0>;
+L_0x7fb280409100 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7fb280409620 .functor NMOS 1, L_0x7fb280409100, o0x10148c098, C4<0>, C4<0>;
+v0x7fb2806028a0_0 .net8 "Gnd", 0 0, L_0x7fb280409100;  1 drivers, strength-aware
+v0x7fb280408580_0 .net8 "Vdd", 0 0, L_0x7fb280409190;  1 drivers, strength-aware
+v0x7fb280408630_0 .net "a", 0 0, o0x10148c068;  alias, 0 drivers
+v0x7fb2804086e0_0 .net "b", 0 0, o0x10148c098;  alias, 0 drivers
+v0x7fb280408780_0 .net8 "c", 0 0, L_0x7fb280409620;  1 drivers, strength-aware
+v0x7fb280408860_0 .net8 "result", 0 0, RS_0x10148c0f8;  alias, 3 drivers, strength-aware
+S_0x7fb280408930 .scope module, "not_temp" "not_gate" 2 11, 4 1 0, S_0x7fb280600540;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "result"
+L_0x7fb2804092c0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7fb280409710 .functor PMOS 1, L_0x7fb2804092c0, RS_0x10148c0f8, C4<0>, C4<0>;
+L_0x7fb280409230 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7fb280409800 .functor NMOS 1, L_0x7fb280409230, RS_0x10148c0f8, C4<0>, C4<0>;
+v0x7fb280408b30_0 .net8 "Gnd", 0 0, L_0x7fb280409230;  1 drivers, strength-aware
+v0x7fb280408be0_0 .net8 "Vdd", 0 0, L_0x7fb2804092c0;  1 drivers, strength-aware
+v0x7fb280408c80_0 .net8 "a", 0 0, RS_0x10148c0f8;  alias, 3 drivers, strength-aware
+v0x7fb280408d50_0 .net8 "result", 0 0, RS_0x10148c218;  alias, 2 drivers, strength-aware
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "and.v";
+    "./../nand/nand.v";
+    "./../not/not.v";

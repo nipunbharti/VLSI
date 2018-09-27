@@ -1,0 +1,161 @@
+#! /usr/local/Cellar/icarus-verilog/10.2_1/bin/vvp
+:ivl_version "10.2 (stable)" "(v10_2)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7ffab0503280 .scope module, "mux_2x1_trans_tb" "mux_2x1_trans_tb" 2 1;
+ .timescale 0 0;
+v0x7ffab051f920_0 .var "abit", 0 0;
+v0x7ffab051f9f0_0 .var "bbit", 0 0;
+RS_0x108daf248 .resolv tri, L_0x7ffab05202f0, L_0x7ffab0520460, L_0x7ffab0520800, L_0x7ffab0520870;
+v0x7ffab051fac0_0 .net8 "res", 0 0, RS_0x108daf248;  4 drivers, strength-aware
+v0x7ffab051fb50_0 .var "sbit", 0 0;
+S_0x7ffab0501ed0 .scope module, "mux_2x1_trans_tb" "mux_2x1_trans" 2 7, 3 3 0, S_0x7ffab0503280;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d0"
+    .port_info 1 /INPUT 1 "d1"
+    .port_info 2 /INPUT 1 "s"
+    .port_info 3 /OUTPUT 1 "result"
+v0x7ffab051f590_0 .net "d0", 0 0, v0x7ffab051f920_0;  1 drivers
+v0x7ffab051f620_0 .net "d1", 0 0, v0x7ffab051f9f0_0;  1 drivers
+v0x7ffab051f6d0_0 .net8 "result", 0 0, RS_0x108daf248;  alias, 4 drivers, strength-aware
+v0x7ffab051f7c0_0 .net "s", 0 0, v0x7ffab051fb50_0;  1 drivers
+RS_0x108daf098 .resolv tri, L_0x7ffab051ff70, L_0x7ffab0520080;
+v0x7ffab051f850_0 .net8 "s_comp", 0 0, RS_0x108daf098;  2 drivers, strength-aware
+S_0x7ffab05000c0 .scope module, "not_temp" "not_gate" 3 7, 4 1 0, S_0x7ffab0501ed0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "result"
+L_0x7ffab051fcd0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7ffab051ff70 .functor PMOS 1, L_0x7ffab051fcd0, v0x7ffab051fb50_0, C4<0>, C4<0>;
+L_0x7ffab051fc60 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7ffab0520080 .functor NMOS 1, L_0x7ffab051fc60, v0x7ffab051fb50_0, C4<0>, C4<0>;
+v0x7ffab0500ed0_0 .net8 "Gnd", 0 0, L_0x7ffab051fc60;  1 drivers, strength-aware
+v0x7ffab051dfc0_0 .net8 "Vdd", 0 0, L_0x7ffab051fcd0;  1 drivers, strength-aware
+v0x7ffab051e060_0 .net "a", 0 0, v0x7ffab051fb50_0;  alias, 1 drivers
+v0x7ffab051e110_0 .net8 "result", 0 0, RS_0x108daf098;  alias, 2 drivers, strength-aware
+S_0x7ffab051e1e0 .scope module, "transmission_temp1" "transmission" 3 12, 5 3 0, S_0x7ffab0501ed0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "en"
+    .port_info 2 /OUTPUT 1 "result"
+RS_0x108daf188 .resolv tri, L_0x7ffab0520150, L_0x7ffab0520240;
+L_0x7ffab05202f0 .functor PMOS 1, v0x7ffab051f920_0, RS_0x108daf188, C4<0>, C4<0>;
+L_0x7ffab0520460 .functor NMOS 1, v0x7ffab051f920_0, RS_0x108daf098, C4<0>, C4<0>;
+v0x7ffab051e8c0_0 .net "a", 0 0, v0x7ffab051f920_0;  alias, 1 drivers
+v0x7ffab051e960_0 .net8 "en", 0 0, RS_0x108daf098;  alias, 2 drivers, strength-aware
+v0x7ffab051ea40_0 .net8 "en_comp", 0 0, RS_0x108daf188;  2 drivers, strength-aware
+v0x7ffab051eaf0_0 .net8 "result", 0 0, RS_0x108daf248;  alias, 4 drivers, strength-aware
+S_0x7ffab051e400 .scope module, "not_temp" "not_gate" 5 7, 4 1 0, S_0x7ffab051e1e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "result"
+L_0x7ffab051fdb0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7ffab0520150 .functor PMOS 1, L_0x7ffab051fdb0, RS_0x108daf098, C4<0>, C4<0>;
+L_0x7ffab051fd40 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7ffab0520240 .functor NMOS 1, L_0x7ffab051fd40, RS_0x108daf098, C4<0>, C4<0>;
+v0x7ffab051e5f0_0 .net8 "Gnd", 0 0, L_0x7ffab051fd40;  1 drivers, strength-aware
+v0x7ffab051e6a0_0 .net8 "Vdd", 0 0, L_0x7ffab051fdb0;  1 drivers, strength-aware
+v0x7ffab051e740_0 .net8 "a", 0 0, RS_0x108daf098;  alias, 2 drivers, strength-aware
+v0x7ffab051e810_0 .net8 "result", 0 0, RS_0x108daf188;  alias, 2 drivers, strength-aware
+S_0x7ffab051ebb0 .scope module, "transmission_temp2" "transmission" 3 18, 5 3 0, S_0x7ffab0501ed0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "en"
+    .port_info 2 /OUTPUT 1 "result"
+RS_0x108daf368 .resolv tri, L_0x7ffab0520650, L_0x7ffab0520000;
+L_0x7ffab0520800 .functor PMOS 1, v0x7ffab051f9f0_0, RS_0x108daf368, C4<0>, C4<0>;
+L_0x7ffab0520870 .functor NMOS 1, v0x7ffab051f9f0_0, v0x7ffab051fb50_0, C4<0>, C4<0>;
+v0x7ffab051f290_0 .net "a", 0 0, v0x7ffab051f9f0_0;  alias, 1 drivers
+v0x7ffab051f330_0 .net "en", 0 0, v0x7ffab051fb50_0;  alias, 1 drivers
+v0x7ffab051f410_0 .net8 "en_comp", 0 0, RS_0x108daf368;  2 drivers, strength-aware
+v0x7ffab051f4c0_0 .net8 "result", 0 0, RS_0x108daf248;  alias, 4 drivers, strength-aware
+S_0x7ffab051edd0 .scope module, "not_temp" "not_gate" 5 7, 4 1 0, S_0x7ffab051ebb0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "result"
+L_0x7ffab051fed0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7ffab0520650 .functor PMOS 1, L_0x7ffab051fed0, v0x7ffab051fb50_0, C4<0>, C4<0>;
+L_0x7ffab051fe40 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7ffab0520000 .functor NMOS 1, L_0x7ffab051fe40, v0x7ffab051fb50_0, C4<0>, C4<0>;
+v0x7ffab051efc0_0 .net8 "Gnd", 0 0, L_0x7ffab051fe40;  1 drivers, strength-aware
+v0x7ffab051f070_0 .net8 "Vdd", 0 0, L_0x7ffab051fed0;  1 drivers, strength-aware
+v0x7ffab051f110_0 .net "a", 0 0, v0x7ffab051fb50_0;  alias, 1 drivers
+v0x7ffab051f1e0_0 .net8 "result", 0 0, RS_0x108daf368;  alias, 2 drivers, strength-aware
+    .scope S_0x7ffab0503280;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7ffab051fb50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7ffab051f9f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7ffab051f920_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7ffab051fb50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7ffab051f9f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7ffab051f920_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7ffab051fb50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7ffab051f9f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7ffab051f920_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7ffab051fb50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7ffab051f9f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7ffab051f920_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7ffab051fb50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7ffab051f9f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7ffab051f920_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7ffab051fb50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7ffab051f9f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7ffab051f920_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7ffab051fb50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7ffab051f9f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7ffab051f920_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7ffab051fb50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7ffab051f9f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7ffab051f920_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x7ffab0503280;
+T_1 ;
+    %vpi_call 2 28 "$dumpfile", "mux_2x1_trans.vcd" {0 0 0};
+    %vpi_call 2 29 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7ffab0501ed0 {0 0 0};
+    %vpi_call 2 30 "$monitor", "time = %2d, abit = %1b, bbit = %1b, sbit = %1b result = %1b", $time, v0x7ffab051f920_0, v0x7ffab051f9f0_0, v0x7ffab051fb50_0, v0x7ffab051fac0_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "2x1mux_trans_tb.v";
+    "2x1mux_trans.v";
+    "./../not/not.v";
+    "./../tranmission/tranmission.v";

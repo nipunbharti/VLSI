@@ -1,0 +1,88 @@
+$date
+	Thu Aug 30 16:25:08 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module xor_tb $end
+$scope module xor_tb $end
+$var wire 1 ! Gnd $end
+$var wire 1 " Vdd $end
+$var wire 1 # a $end
+$var wire 1 $ a_comp $end
+$var wire 1 % b $end
+$var wire 1 & b_comp $end
+$var wire 1 ' m $end
+$var wire 1 ( result $end
+$var wire 1 ) temp $end
+$var wire 1 * x $end
+$var wire 1 + y $end
+$scope module not_temp1 $end
+$var wire 1 , Gnd $end
+$var wire 1 - Vdd $end
+$var wire 1 # a $end
+$var wire 1 $ result $end
+$upscope $end
+$scope module not_temp2 $end
+$var wire 1 . Gnd $end
+$var wire 1 / Vdd $end
+$var wire 1 % a $end
+$var wire 1 & result $end
+$upscope $end
+$scope module not_temp3 $end
+$var wire 1 0 Gnd $end
+$var wire 1 1 Vdd $end
+$var wire 1 ) a $end
+$var wire 1 ( result $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+11
+00
+1/
+0.
+1-
+0,
+0+
+z*
+1)
+0(
+1'
+1&
+0%
+1$
+0#
+1"
+0!
+$end
+#10
+0*
+1(
+0)
+z+
+0&
+1%
+#20
+z*
+0+
+z'
+1&
+0%
+1(
+0)
+0$
+1#
+#30
+0*
+z+
+0(
+1)
+1'
+0&
+1%

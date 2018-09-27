@@ -1,0 +1,75 @@
+#! /usr/local/Cellar/icarus-verilog/10.2_1/bin/vvp
+:ivl_version "10.2 (stable)" "(v10_2)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fc13bc01c90 .scope module, "transmission_tb" "transmission_tb" 2 1;
+ .timescale 0 0;
+v0x7fc13bc126a0_0 .var "abit", 0 0;
+v0x7fc13bc12740_0 .var "bbit", 0 0;
+RS_0x1094e4158 .resolv tri, L_0x7fc13bc12c20, L_0x7fc13bc12d50;
+v0x7fc13bc12810_0 .net8 "res", 0 0, RS_0x1094e4158;  2 drivers, strength-aware
+S_0x7fc13bc01df0 .scope module, "transmission_tb" "transmission" 2 6, 3 3 0, S_0x7fc13bc01c90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "en"
+    .port_info 2 /OUTPUT 1 "result"
+RS_0x1094e4098 .resolv tri, L_0x7fc13bc129e0, L_0x7fc13bc12af0;
+L_0x7fc13bc12c20 .functor PMOS 1, v0x7fc13bc126a0_0, RS_0x1094e4098, C4<0>, C4<0>;
+L_0x7fc13bc12d50 .functor NMOS 1, v0x7fc13bc126a0_0, v0x7fc13bc12740_0, C4<0>, C4<0>;
+v0x7fc13bc123c0_0 .net "a", 0 0, v0x7fc13bc126a0_0;  1 drivers
+v0x7fc13bc12460_0 .net "en", 0 0, v0x7fc13bc12740_0;  1 drivers
+v0x7fc13bc12520_0 .net8 "en_comp", 0 0, RS_0x1094e4098;  2 drivers, strength-aware
+v0x7fc13bc125f0_0 .net8 "result", 0 0, RS_0x1094e4158;  alias, 2 drivers, strength-aware
+S_0x7fc13bc01fa0 .scope module, "not_temp" "not_gate" 3 7, 4 1 0, S_0x7fc13bc01df0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "result"
+L_0x7fc13bc12950 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7fc13bc129e0 .functor PMOS 1, L_0x7fc13bc12950, v0x7fc13bc12740_0, C4<0>, C4<0>;
+L_0x7fc13bc128c0 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7fc13bc12af0 .functor NMOS 1, L_0x7fc13bc128c0, v0x7fc13bc12740_0, C4<0>, C4<0>;
+v0x7fc13bc02150_0 .net8 "Gnd", 0 0, L_0x7fc13bc128c0;  1 drivers, strength-aware
+v0x7fc13bc121a0_0 .net8 "Vdd", 0 0, L_0x7fc13bc12950;  1 drivers, strength-aware
+v0x7fc13bc12240_0 .net "a", 0 0, v0x7fc13bc12740_0;  alias, 1 drivers
+v0x7fc13bc122f0_0 .net8 "result", 0 0, RS_0x1094e4098;  alias, 2 drivers, strength-aware
+    .scope S_0x7fc13bc01c90;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fc13bc126a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fc13bc12740_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fc13bc126a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fc13bc12740_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fc13bc126a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fc13bc12740_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fc13bc126a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fc13bc12740_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x7fc13bc01c90;
+T_1 ;
+    %vpi_call 2 22 "$dumpfile", "transmission.vcd" {0 0 0};
+    %vpi_call 2 23 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7fc13bc01df0 {0 0 0};
+    %vpi_call 2 24 "$monitor", "time = %2d, abit = %1b, en = %1b, result = %1b", $time, v0x7fc13bc126a0_0, v0x7fc13bc12740_0, v0x7fc13bc12810_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "tranmission_tb.v";
+    "tranmission.v";
+    "./../not/not.v";

@@ -1,0 +1,98 @@
+$date
+	Thu Sep  6 15:17:44 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux_2x1_tb $end
+$scope module mux_2x1_tb $end
+$var wire 1 ! Gnd $end
+$var wire 1 " Vdd $end
+$var wire 1 # d0 $end
+$var wire 1 $ d1 $end
+$var wire 1 % left_bottom_d0 $end
+$var wire 1 & result $end
+$var wire 1 ' result_comp $end
+$var wire 1 ( right_bottom_d1 $end
+$var wire 1 ) right_top_d1 $end
+$var wire 1 * s $end
+$var wire 1 + s_comp $end
+$scope module not_temp1 $end
+$var wire 1 , Gnd $end
+$var wire 1 - Vdd $end
+$var wire 1 * a $end
+$var wire 1 + result $end
+$upscope $end
+$scope module not_temp2 $end
+$var wire 1 . Gnd $end
+$var wire 1 / Vdd $end
+$var wire 1 ' a $end
+$var wire 1 & result $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1/
+0.
+1-
+0,
+1+
+0*
+1)
+z(
+1'
+0&
+z%
+0$
+0#
+1"
+0!
+$end
+#10
+0%
+1&
+0'
+z)
+1#
+#20
+z%
+0&
+1'
+1)
+0#
+0(
+1$
+#30
+0%
+1&
+0'
+z)
+1#
+#40
+z%
+0#
+z(
+0$
+0&
+1'
+1)
+0+
+1*
+#50
+0%
+1#
+#60
+z%
+0#
+0(
+1&
+0'
+1$
+#70
+0%
+1#

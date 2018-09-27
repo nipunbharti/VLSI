@@ -1,0 +1,69 @@
+#! /usr/local/Cellar/icarus-verilog/10.2_1/bin/vvp
+:ivl_version "10.2 (stable)" "(v10_2)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fd80d5004a0 .scope module, "xor_gate" "xor_gate" 2 2;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /OUTPUT 1 "result"
+L_0x7fd80d511640 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+o0x10c523188 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7fd80d511d60 .functor NMOS 1, L_0x7fd80d511640, o0x10c523188, C4<0>, C4<0>;
+RS_0x10c5231b8 .resolv tri, L_0x7fd80d511b80, L_0x7fd80d511cb0;
+L_0x7fd80d511e90 .functor NMOS 1, L_0x7fd80d511640, RS_0x10c5231b8, C4<0>, C4<0>;
+RS_0x10c523098 .resolv tri, L_0x7fd80d511980, L_0x7fd80d511ad0;
+L_0x7fd80d511f80 .functor NMOS 1, L_0x7fd80d511d60, RS_0x10c523098, C4<0>, C4<0>;
+o0x10c523068 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7fd80d5120a0 .functor NMOS 1, L_0x7fd80d511e90, o0x10c523068, C4<0>, C4<0>;
+L_0x7fd80d5116b0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7fd80d5121d0 .functor PMOS 1, L_0x7fd80d5116b0, o0x10c523068, C4<0>, C4<0>;
+L_0x7fd80d512280 .functor PMOS 1, L_0x7fd80d5116b0, RS_0x10c5231b8, C4<0>, C4<0>;
+RS_0x10c5232a8 .resolv tri, L_0x7fd80d5121d0, L_0x7fd80d512280;
+L_0x7fd80d512330 .functor PMOS 1, RS_0x10c5232a8, RS_0x10c523098, C4<0>, C4<0>;
+L_0x7fd80d5123f0 .functor PMOS 1, RS_0x10c5232a8, o0x10c523188, C4<0>, C4<0>;
+v0x7fd80d510f00_0 .net8 "Gnd", 0 0, L_0x7fd80d511640;  1 drivers, strength-aware
+v0x7fd80d510fa0_0 .net8 "Vdd", 0 0, L_0x7fd80d5116b0;  1 drivers, strength-aware
+v0x7fd80d511040_0 .net "a", 0 0, o0x10c523068;  0 drivers
+v0x7fd80d511110_0 .net8 "a_comp", 0 0, RS_0x10c523098;  2 drivers, strength-aware
+v0x7fd80d5111c0_0 .net "b", 0 0, o0x10c523188;  0 drivers
+v0x7fd80d511290_0 .net8 "b_comp", 0 0, RS_0x10c5231b8;  2 drivers, strength-aware
+v0x7fd80d511340_0 .net8 "m", 0 0, RS_0x10c5232a8;  2 drivers, strength-aware
+RS_0x10c5232d8 .resolv tri, L_0x7fd80d511f80, L_0x7fd80d5120a0, L_0x7fd80d512330, L_0x7fd80d5123f0;
+v0x7fd80d5113d0_0 .net8 "result", 0 0, RS_0x10c5232d8;  4 drivers, strength-aware
+v0x7fd80d511460_0 .net8 "x", 0 0, L_0x7fd80d511d60;  1 drivers, strength-aware
+v0x7fd80d511570_0 .net8 "y", 0 0, L_0x7fd80d511e90;  1 drivers, strength-aware
+S_0x7fd80d500600 .scope module, "not_temp1" "not_gate" 2 11, 3 1 0, S_0x7fd80d5004a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "result"
+L_0x7fd80d5117b0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7fd80d511980 .functor PMOS 1, L_0x7fd80d5117b0, o0x10c523068, C4<0>, C4<0>;
+L_0x7fd80d511720 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7fd80d511ad0 .functor NMOS 1, L_0x7fd80d511720, o0x10c523068, C4<0>, C4<0>;
+v0x7fd80d5007b0_0 .net8 "Gnd", 0 0, L_0x7fd80d511720;  1 drivers, strength-aware
+v0x7fd80d510850_0 .net8 "Vdd", 0 0, L_0x7fd80d5117b0;  1 drivers, strength-aware
+v0x7fd80d5108f0_0 .net "a", 0 0, o0x10c523068;  alias, 0 drivers
+v0x7fd80d510980_0 .net8 "result", 0 0, RS_0x10c523098;  alias, 2 drivers, strength-aware
+S_0x7fd80d510a50 .scope module, "not_temp2" "not_gate" 2 16, 3 1 0, S_0x7fd80d5004a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "result"
+L_0x7fd80d5118e0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7fd80d511b80 .functor PMOS 1, L_0x7fd80d5118e0, o0x10c523188, C4<0>, C4<0>;
+L_0x7fd80d511850 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7fd80d511cb0 .functor NMOS 1, L_0x7fd80d511850, o0x10c523188, C4<0>, C4<0>;
+v0x7fd80d510c30_0 .net8 "Gnd", 0 0, L_0x7fd80d511850;  1 drivers, strength-aware
+v0x7fd80d510ce0_0 .net8 "Vdd", 0 0, L_0x7fd80d5118e0;  1 drivers, strength-aware
+v0x7fd80d510d80_0 .net "a", 0 0, o0x10c523188;  alias, 0 drivers
+v0x7fd80d510e30_0 .net8 "result", 0 0, RS_0x10c5231b8;  alias, 2 drivers, strength-aware
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "xor.v";
+    "./../not/not.v";

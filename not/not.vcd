@@ -1,0 +1,28 @@
+$date
+	Thu Aug 30 15:39:00 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module not_tb $end
+$scope module not_tb $end
+$var wire 1 ! Gnd $end
+$var wire 1 " Vdd $end
+$var wire 1 # a $end
+$var wire 1 $ result $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1$
+0#
+1"
+0!
+$end
+#10
+0$
+1#

@@ -1,0 +1,30 @@
+$date
+	Thu Sep 20 15:51:03 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module encoder4x2_switch_tb $end
+$scope module encoder4x2_switch_tb $end
+$var wire 4 ! in [3:0] $end
+$var reg 2 " result [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 "
+b1 !
+$end
+#10
+b1 "
+b10 !
+#20
+b10 "
+b100 !
+#30
+b11 "
+b1000 !

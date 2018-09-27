@@ -1,0 +1,91 @@
+#! /usr/local/Cellar/icarus-verilog/10.2_1/bin/vvp
+:ivl_version "10.2 (stable)" "(v10_2)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fa779c04b30 .scope module, "or_tb" "or_tb" 2 1;
+ .timescale 0 0;
+v0x7fa779c1d280_0 .var "abit", 0 0;
+v0x7fa779c1d350_0 .var "bbit", 0 0;
+RS_0x10301b218 .resolv tri, L_0x7fa779c1db40, L_0x7fa779c1dbb0;
+v0x7fa779c1d420_0 .net8 "res", 0 0, RS_0x10301b218;  2 drivers, strength-aware
+S_0x7fa779c034d0 .scope module, "or_tb" "or_gate" 2 6, 3 3 0, S_0x7fa779c04b30;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /OUTPUT 1 "res"
+v0x7fa779c1cf80_0 .net "A", 0 0, v0x7fa779c1d280_0;  1 drivers
+v0x7fa779c1d030_0 .net "B", 0 0, v0x7fa779c1d350_0;  1 drivers
+v0x7fa779c1d0e0_0 .net8 "res", 0 0, RS_0x10301b218;  alias, 2 drivers, strength-aware
+RS_0x10301b0f8 .resolv tri, L_0x7fa779c1d7e0, L_0x7fa779c1d8b0, L_0x7fa779c1da50;
+v0x7fa779c1d1b0_0 .net8 "temp", 0 0, RS_0x10301b0f8;  3 drivers, strength-aware
+S_0x7fa779c06550 .scope module, "nand_temp" "nor_gate" 3 6, 4 1 0, S_0x7fa779c034d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /OUTPUT 1 "result"
+L_0x7fa779c1d560 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7fa779c1d6f0 .functor PMOS 1, L_0x7fa779c1d560, v0x7fa779c1d280_0, C4<0>, C4<0>;
+L_0x7fa779c1d7e0 .functor PMOS 1, L_0x7fa779c1d6f0, v0x7fa779c1d350_0, C4<0>, C4<0>;
+L_0x7fa779c1d4f0 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7fa779c1d8b0 .functor NMOS 1, L_0x7fa779c1d4f0, v0x7fa779c1d280_0, C4<0>, C4<0>;
+L_0x7fa779c1da50 .functor NMOS 1, L_0x7fa779c1d4f0, v0x7fa779c1d350_0, C4<0>, C4<0>;
+v0x7fa779c03680_0 .net8 "Gnd", 0 0, L_0x7fa779c1d4f0;  1 drivers, strength-aware
+v0x7fa779c1c740_0 .net8 "Vdd", 0 0, L_0x7fa779c1d560;  1 drivers, strength-aware
+v0x7fa779c1c7e0_0 .net "a", 0 0, v0x7fa779c1d280_0;  alias, 1 drivers
+v0x7fa779c1c890_0 .net "b", 0 0, v0x7fa779c1d350_0;  alias, 1 drivers
+v0x7fa779c1c930_0 .net8 "c", 0 0, L_0x7fa779c1d6f0;  1 drivers, strength-aware
+v0x7fa779c1ca10_0 .net8 "result", 0 0, RS_0x10301b0f8;  alias, 3 drivers, strength-aware
+S_0x7fa779c1cae0 .scope module, "not_temp" "not_gate" 3 11, 5 1 0, S_0x7fa779c034d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "result"
+L_0x7fa779c1d660 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7fa779c1db40 .functor PMOS 1, L_0x7fa779c1d660, RS_0x10301b0f8, C4<0>, C4<0>;
+L_0x7fa779c1d5d0 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7fa779c1dbb0 .functor NMOS 1, L_0x7fa779c1d5d0, RS_0x10301b0f8, C4<0>, C4<0>;
+v0x7fa779c1ccd0_0 .net8 "Gnd", 0 0, L_0x7fa779c1d5d0;  1 drivers, strength-aware
+v0x7fa779c1cd60_0 .net8 "Vdd", 0 0, L_0x7fa779c1d660;  1 drivers, strength-aware
+v0x7fa779c1ce00_0 .net8 "a", 0 0, RS_0x10301b0f8;  alias, 3 drivers, strength-aware
+v0x7fa779c1ced0_0 .net8 "result", 0 0, RS_0x10301b218;  alias, 2 drivers, strength-aware
+    .scope S_0x7fa779c04b30;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fa779c1d280_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fa779c1d350_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fa779c1d280_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fa779c1d350_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fa779c1d280_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fa779c1d350_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fa779c1d280_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fa779c1d350_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x7fa779c04b30;
+T_1 ;
+    %vpi_call 2 23 "$dumpfile", "or.vcd" {0 0 0};
+    %vpi_call 2 24 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7fa779c034d0 {0 0 0};
+    %vpi_call 2 25 "$monitor", "time = %2d, abit = %1b, bbit = %1b, result = %1b", $time, v0x7fa779c1d280_0, v0x7fa779c1d350_0, v0x7fa779c1d420_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "or_tb.v";
+    "or.v";
+    "./../nor/nor.v";
+    "./../not/not.v";

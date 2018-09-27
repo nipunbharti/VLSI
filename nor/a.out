@@ -1,0 +1,33 @@
+#! /usr/local/Cellar/icarus-verilog/10.2_1/bin/vvp
+:ivl_version "10.2 (stable)" "(v10_2)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fd1a5c02950 .scope module, "nor_gate" "nor_gate" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /OUTPUT 1 "result"
+L_0x7fd1a5c12fc0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+o0x1043be068 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7fd1a5c13060 .functor PMOS 1, L_0x7fd1a5c12fc0, o0x1043be068, C4<0>, C4<0>;
+o0x1043be098 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7fd1a5c13170 .functor PMOS 1, L_0x7fd1a5c13060, o0x1043be098, C4<0>, C4<0>;
+L_0x7fd1a5c12f40 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7fd1a5c13260 .functor NMOS 1, L_0x7fd1a5c12f40, o0x1043be068, C4<0>, C4<0>;
+L_0x7fd1a5c133e0 .functor NMOS 1, L_0x7fd1a5c12f40, o0x1043be098, C4<0>, C4<0>;
+v0x7fd1a5c02b10_0 .net8 "Gnd", 0 0, L_0x7fd1a5c12f40;  1 drivers, strength-aware
+v0x7fd1a5c12bc0_0 .net8 "Vdd", 0 0, L_0x7fd1a5c12fc0;  1 drivers, strength-aware
+v0x7fd1a5c12c60_0 .net "a", 0 0, o0x1043be068;  0 drivers
+v0x7fd1a5c12cf0_0 .net "b", 0 0, o0x1043be098;  0 drivers
+v0x7fd1a5c12d90_0 .net8 "c", 0 0, L_0x7fd1a5c13060;  1 drivers, strength-aware
+RS_0x1043be0f8 .resolv tri, L_0x7fd1a5c13170, L_0x7fd1a5c13260, L_0x7fd1a5c133e0;
+v0x7fd1a5c12e70_0 .net8 "result", 0 0, RS_0x1043be0f8;  3 drivers, strength-aware
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "nor.v";

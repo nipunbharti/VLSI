@@ -1,0 +1,46 @@
+$date
+	Thu Sep  6 15:58:16 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module transmission_tb $end
+$scope module transmission_tb $end
+$var wire 1 ! a $end
+$var wire 1 " en $end
+$var wire 1 # en_comp $end
+$var wire 1 $ result $end
+$scope module not_temp $end
+$var wire 1 % Gnd $end
+$var wire 1 & Vdd $end
+$var wire 1 " a $end
+$var wire 1 # result $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1&
+0%
+z$
+1#
+0"
+0!
+$end
+#10
+0$
+0#
+1"
+#20
+1#
+0"
+z$
+1!
+#30
+1$
+0#
+1"

@@ -1,0 +1,54 @@
+$date
+	Thu Aug 30 16:14:58 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module or_tb $end
+$scope module or_tb $end
+$var wire 1 ! A $end
+$var wire 1 " B $end
+$var wire 1 # res $end
+$var wire 1 $ temp $end
+$scope module nand_temp $end
+$var wire 1 % Gnd $end
+$var wire 1 & Vdd $end
+$var wire 1 ! a $end
+$var wire 1 " b $end
+$var wire 1 ' c $end
+$var wire 1 $ result $end
+$upscope $end
+$scope module not_temp $end
+$var wire 1 ( Gnd $end
+$var wire 1 ) Vdd $end
+$var wire 1 $ a $end
+$var wire 1 # result $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1)
+0(
+1'
+1&
+0%
+1$
+0#
+0"
+0!
+$end
+#10
+1#
+0$
+1"
+#20
+0"
+z'
+1!
+#30
+1"

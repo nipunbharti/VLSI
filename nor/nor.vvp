@@ -1,0 +1,67 @@
+#! /usr/local/Cellar/icarus-verilog/10.2_1/bin/vvp
+:ivl_version "10.2 (stable)" "(v10_2)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7fe825406b40 .scope module, "nor_tb" "nor_tb" 2 1;
+ .timescale 0 0;
+v0x7fe8254171d0_0 .var "abit", 0 0;
+v0x7fe825417270_0 .var "bbit", 0 0;
+RS_0x10db190f8 .resolv tri, L_0x7fe825417640, L_0x7fe825417770, L_0x7fe825417850;
+v0x7fe825417320_0 .net8 "res", 0 0, RS_0x10db190f8;  3 drivers, strength-aware
+S_0x7fe825406ca0 .scope module, "nor_tb" "nor_gate" 2 6, 3 1 0, S_0x7fe825406b40;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /OUTPUT 1 "result"
+L_0x7fe825417480 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7fe825417510 .functor PMOS 1, L_0x7fe825417480, v0x7fe8254171d0_0, C4<0>, C4<0>;
+L_0x7fe825417640 .functor PMOS 1, L_0x7fe825417510, v0x7fe825417270_0, C4<0>, C4<0>;
+L_0x7fe8254173f0 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7fe825417770 .functor NMOS 1, L_0x7fe8254173f0, v0x7fe8254171d0_0, C4<0>, C4<0>;
+L_0x7fe825417850 .functor NMOS 1, L_0x7fe8254173f0, v0x7fe825417270_0, C4<0>, C4<0>;
+v0x7fe825406e50_0 .net8 "Gnd", 0 0, L_0x7fe8254173f0;  1 drivers, strength-aware
+v0x7fe825416e30_0 .net8 "Vdd", 0 0, L_0x7fe825417480;  1 drivers, strength-aware
+v0x7fe825416ed0_0 .net "a", 0 0, v0x7fe8254171d0_0;  1 drivers
+v0x7fe825416f80_0 .net "b", 0 0, v0x7fe825417270_0;  1 drivers
+v0x7fe825417020_0 .net8 "c", 0 0, L_0x7fe825417510;  1 drivers, strength-aware
+v0x7fe825417100_0 .net8 "result", 0 0, RS_0x10db190f8;  alias, 3 drivers, strength-aware
+    .scope S_0x7fe825406b40;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fe8254171d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fe825417270_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fe8254171d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fe825417270_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fe8254171d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x7fe825417270_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fe8254171d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x7fe825417270_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x7fe825406b40;
+T_1 ;
+    %vpi_call 2 23 "$dumpfile", "nor.vcd" {0 0 0};
+    %vpi_call 2 24 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7fe825406ca0 {0 0 0};
+    %vpi_call 2 25 "$monitor", "time = %2d, abit = %1b, bbit = %1b, result = %1b", $time, v0x7fe8254171d0_0, v0x7fe825417270_0, v0x7fe825417320_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "nor_tb.v";
+    "nor.v";

@@ -1,0 +1,44 @@
+$date
+	Thu Sep 20 15:57:45 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module demux1x8_always_tb $end
+$scope module demux1x8_always_tb $end
+$var wire 1 ! in $end
+$var wire 3 " sel [2:0] $end
+$var reg 8 # result [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 #
+b0 "
+1!
+$end
+#10
+b10 #
+b1 "
+#20
+b100 #
+b10 "
+#30
+b1000 #
+b11 "
+#40
+b10000 #
+b100 "
+#50
+b100000 #
+b101 "
+#60
+b1000000 #
+b110 "
+#70
+b10000000 #
+b111 "

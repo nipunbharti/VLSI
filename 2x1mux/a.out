@@ -1,0 +1,62 @@
+#! /usr/local/Cellar/icarus-verilog/10.2_1/bin/vvp
+:ivl_version "10.2 (stable)" "(v10_2)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7f8347600480 .scope module, "mux_2x1" "mux_2x1" 2 3;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d0"
+    .port_info 1 /INPUT 1 "d1"
+    .port_info 2 /INPUT 1 "s"
+    .port_info 3 /OUTPUT 1 "result"
+L_0x7f8347707d40 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+o0x102aac1e8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7f83477081b0 .functor NMOS 1, L_0x7f8347707d40, o0x102aac1e8, C4<0>, C4<0>;
+o0x102aac248 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7f8347708280 .functor NMOS 1, o0x102aac1e8, o0x102aac248, C4<0>, C4<0>;
+L_0x7f8347707de0 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+o0x102aac218 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7f8347708390 .functor PMOS 1, L_0x7f8347707de0, o0x102aac218, C4<0>, C4<0>;
+L_0x7f83477084d0 .functor PMOS 1, o0x102aac218, o0x102aac248, C4<0>, C4<0>;
+o0x102aac278 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7f8347708600 .functor NMOS 1, L_0x7f8347707d40, o0x102aac278, C4<0>, C4<0>;
+L_0x7f83477086b0 .functor NMOS 1, o0x102aac278, o0x102aac248, C4<0>, C4<0>;
+o0x102aac2a8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x7f8347708780 .functor PMOS 1, L_0x7f8347707de0, o0x102aac2a8, C4<0>, C4<0>;
+L_0x7f8347708880 .functor PMOS 1, o0x102aac2a8, o0x102aac248, C4<0>, C4<0>;
+v0x7f8347707580_0 .net8 "Gnd", 0 0, L_0x7f8347707d40;  1 drivers, strength-aware
+v0x7f8347707630_0 .net8 "Vdd", 0 0, L_0x7f8347707de0;  1 drivers, strength-aware
+RS_0x102aac188 .resolv tri, L_0x7f83477081b0, L_0x7f8347708390;
+v0x7f83477076d0_0 .net8 "d0", 0 0, RS_0x102aac188;  2 drivers, strength-aware
+RS_0x102aac1b8 .resolv tri, L_0x7f8347708600, L_0x7f8347708780;
+v0x7f8347707780_0 .net8 "d1", 0 0, RS_0x102aac1b8;  2 drivers, strength-aware
+v0x7f8347707820_0 .net "left_bottom_d0", 0 0, o0x102aac1e8;  0 drivers
+v0x7f8347707900_0 .net "left_top_d0", 0 0, o0x102aac218;  0 drivers
+v0x7f83477079a0_0 .net "result", 0 0, o0x102aac248;  0 drivers
+v0x7f8347707a40_0 .net "right_bottom_d1", 0 0, o0x102aac278;  0 drivers
+v0x7f8347707ae0_0 .net "right_top_d1", 0 0, o0x102aac2a8;  0 drivers
+RS_0x102aac068 .resolv tri, L_0x7f83477084d0, L_0x7f83477086b0;
+v0x7f8347707bf0_0 .net8 "s", 0 0, RS_0x102aac068;  2 drivers, strength-aware
+RS_0x102aac098 .resolv tri, L_0x7f8347707fb0, L_0x7f8347708100, L_0x7f8347708280, L_0x7f8347708880;
+v0x7f8347707ca0_0 .net8 "s_comp", 0 0, RS_0x102aac098;  4 drivers, strength-aware
+S_0x7f83476005e0 .scope module, "not_temp" "not_gate" 2 11, 3 1 0, S_0x7f8347600480;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /OUTPUT 1 "result"
+L_0x7f8347707f10 .functor BUFT 1, C8<771>, C4<0>, C4<0>, C4<0>;
+L_0x7f8347707fb0 .functor PMOS 1, L_0x7f8347707f10, RS_0x102aac068, C4<0>, C4<0>;
+L_0x7f8347707e80 .functor BUFT 1, C8<770>, C4<0>, C4<0>, C4<0>;
+L_0x7f8347708100 .functor NMOS 1, L_0x7f8347707e80, RS_0x102aac068, C4<0>, C4<0>;
+v0x7f8347600790_0 .net8 "Gnd", 0 0, L_0x7f8347707e80;  1 drivers, strength-aware
+v0x7f8347707350_0 .net8 "Vdd", 0 0, L_0x7f8347707f10;  1 drivers, strength-aware
+v0x7f8347707400_0 .net8 "a", 0 0, RS_0x102aac068;  alias, 2 drivers, strength-aware
+v0x7f83477074b0_0 .net8 "result", 0 0, RS_0x102aac098;  alias, 4 drivers, strength-aware
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "2x1mux.v";
+    "./../not/not.v";
