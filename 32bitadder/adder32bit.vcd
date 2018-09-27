@@ -1,0 +1,23 @@
+$date
+	Thu Sep 27 14:47:49 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module adder32bit_tb $end
+$scope module adder32bit_tb $end
+$var wire 32 ! a [31:0] $end
+$var wire 32 " b [31:0] $end
+$var wire 33 # result [32:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100001000100100010000100010010 #
+b10000000100010001000100000001 "
+b10001000000010001000000010001 !
+$end
