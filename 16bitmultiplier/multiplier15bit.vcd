@@ -1,0 +1,23 @@
+$date
+	Thu Sep 27 15:29:26 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module multiplier15bit_tb $end
+$scope module multiplier15bit_tb $end
+$var wire 16 ! a [15:0] $end
+$var wire 16 " b [15:0] $end
+$var wire 32 # result [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1000100010011000100010001 #
+b1000000010001 "
+b1000100000001 !
+$end
