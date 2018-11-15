@@ -1,0 +1,13 @@
+module e8bitdivide(input clock,reset,enable, output reg[7:0] count_out);
+
+wire clock, reset, enable;
+
+always @(posedge clock) begin
+if(reset==1'b1) begin
+count_out<= #1 8'b11111111;
+end
+else if(enable==1'b1) begin
+count_out<=#1 count_out/2'b10;
+end
+end
+endmodule

@@ -1,0 +1,113 @@
+$date
+	Thu Oct 11 15:45:19 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module e8bitdividetb $end
+$var wire 8 ! count_out [7:0] $end
+$var reg 1 " clock $end
+$var reg 1 # enable $end
+$var reg 1 $ reset $end
+$scope module eb $end
+$var wire 1 " clock $end
+$var wire 1 # enable $end
+$var wire 1 $ reset $end
+$var reg 8 % count_out [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx %
+0$
+0#
+1"
+bx !
+$end
+#5
+0"
+1$
+#10
+1"
+#11
+b11111111 !
+b11111111 %
+#15
+0"
+0$
+#20
+1"
+#25
+0"
+1#
+#30
+1"
+#31
+b1111111 !
+b1111111 %
+#35
+0"
+#40
+1"
+#41
+b111111 !
+b111111 %
+#45
+0"
+#50
+1"
+#51
+b11111 !
+b11111 %
+#55
+0"
+#60
+1"
+#61
+b1111 !
+b1111 %
+#65
+0"
+#70
+1"
+#71
+b111 !
+b111 %
+#75
+0"
+#80
+1"
+#81
+b11 !
+b11 %
+#85
+0"
+#90
+1"
+#91
+b1 !
+b1 %
+#95
+0"
+#100
+1"
+#101
+b0 !
+b0 %
+#105
+0"
+#110
+1"
+#115
+0"
+#120
+1"
+#125
+0"
+0#
+#130
+1"

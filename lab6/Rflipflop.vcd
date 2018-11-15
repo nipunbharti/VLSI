@@ -1,0 +1,62 @@
+$date
+	Thu Oct 25 16:36:14 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Rflipfloptb $end
+$var wire 1 ! q1 $end
+$var wire 1 " q $end
+$var reg 1 # c $end
+$var reg 1 $ r $end
+$var reg 1 % s $end
+$scope module t $end
+$var wire 1 # clk $end
+$var wire 1 $ r $end
+$var wire 1 % s $end
+$var reg 1 " q $end
+$var reg 1 ! q1 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x%
+x$
+1#
+0"
+1!
+$end
+#10
+0#
+1%
+0$
+#20
+1#
+0%
+#30
+0#
+1$
+#40
+1#
+0$
+#50
+0#
+1%
+1$
+#60
+x"
+1#
+#70
+0#
+#80
+1#
+#90
+0#
+#100
+1#
+#110
+0#

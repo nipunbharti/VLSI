@@ -6,10 +6,10 @@ always @ *
 			result <= 4'h1;
 		end
 		else if(en && in == 2'b01) begin
-			result <= 4'h2;
+			result <= 4'h4;
 		end
 		else if(en && in == 2'b10) begin
-			result <= 4'h4;
+			result <= 4'h2;
 		end
 		else result <= 4'h8;
 	end

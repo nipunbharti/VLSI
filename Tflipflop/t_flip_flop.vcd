@@ -1,0 +1,37 @@
+$date
+	Thu Oct 11 14:44:41 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module t_flip_flop_tb $end
+$scope module t_flip_flop_tb $end
+$var wire 1 ! c $end
+$var wire 1 " t $end
+$var reg 1 # q $end
+$var reg 1 $ q1 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1$
+0#
+1"
+1!
+$end
+#1
+0"
+#2
+0!
+#3
+1"
+#4
+0$
+1#
+1!
+#5
+0"

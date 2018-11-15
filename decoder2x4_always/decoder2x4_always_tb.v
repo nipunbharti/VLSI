@@ -11,7 +11,6 @@ decoder2x4_always decoder2x4_always_tb(
 
 	initial
 		begin
-
 			en=1;in[0]=0; in[1]=0;
 			#10; in[0]=0; in[1]=1;
 			#10; in[0]=1; in[1]=0;

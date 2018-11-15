@@ -1,0 +1,55 @@
+$date
+	Thu Oct 25 16:36:05 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Tflipfloptb $end
+$var wire 1 ! q1 $end
+$var wire 1 " q $end
+$var reg 1 # c $end
+$var reg 1 $ t $end
+$scope module tf $end
+$var wire 1 # c $end
+$var wire 1 $ t $end
+$var reg 1 " q $end
+$var reg 1 ! q1 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x$
+1#
+0"
+1!
+$end
+#10
+0#
+0$
+#20
+1#
+#30
+0#
+1$
+#40
+0!
+1"
+1#
+#50
+0#
+#60
+1!
+0"
+1#
+#70
+0#
+#80
+0!
+1"
+1#
+#90
+0#

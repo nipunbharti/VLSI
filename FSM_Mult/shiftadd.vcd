@@ -1,0 +1,33 @@
+$date
+	Thu Oct 25 16:25:32 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module shiftadd_tb $end
+$scope module shiftadd_tb $end
+$var wire 4 ! a [3:0] $end
+$var wire 4 " b [3:0] $end
+$var wire 1 # clk $end
+$var wire 1 $ s $end
+$var reg 8 % p [7:0] $end
+$var reg 4 & x [3:0] $end
+$var reg 8 ' y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0xxxxxxx '
+bx &
+b0xxxxxxx %
+1$
+1#
+b110 "
+b10 !
+$end
+#1
+0$
